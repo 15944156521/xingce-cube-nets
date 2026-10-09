@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans SC", "PingFang SC", "Source Han Sans SC", sans-serif;
+  --font-serif: "Noto Serif SC", "Songti SC", "Noto Serif", serif;
+  --color-paper: #f3efe4;
+  --color-paper-deep: #e6dfd0;
+  --color-card: #fffcf6;
+  --color-ink: #1c2430;
+  --color-muted: #5e6872;
+  --color-line: #d5cdc0;
+  --color-primary: #1e4d6b;
+  --color-primary-soft: #e4eef3;
+  --color-on-primary: #f6f3ea;
+  --color-seal: #9d3b32;
+  --color-seal-soft: #f8ebe8;
+  --color-ok: #1f6b45;
+  --color-ok-soft: #e5f3eb;
+  --color-warn: #8a5a12;
+  --color-warn-soft: #f8f0df;
+  --color-face-a: #e4d2a8;
+  --color-face-b: #b7cfe0;
+  --color-face-c: #efc3b8;
+  --color-face-d: #c5d4b4;
+  --color-face-e: #e3c39a;
+  --color-face-f: #c9c4de;
+  --radius-card: 0.9rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@utility scroll-thin {
+  scrollbar-width: thin;
+}
